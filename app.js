@@ -13,8 +13,9 @@ const {Cart}= require('./model/Cart');
 //middleware
 app.use(cors());
 app.use(morgan('dev'))
-app.use(express.json());
-mongoose.connect('mongodb://127.0.0.1:27017/rahulEcomm')
+app.use(express.json()); 
+
+mongoose.connect('mongodb+srv://shraddhakhandekar64:yGp8fJNxhREE6lMT@cluster0.ss84vkl.mongodb.net/?retryWrites=true&w=majority')
 .then(()=>{
     console.log("db is connected")
 }).catch((error)=>{
